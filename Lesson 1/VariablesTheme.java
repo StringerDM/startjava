@@ -2,8 +2,8 @@ class VariablesTheme {
 
     public static void main(String[] args) {
         //1. Создание переменных и вывод их значений на консоль
-        System.out.println("");
-        System.out.println("1. Создание переменных и вывод их значений на консоль");
+        System.out.println();
+        System.out.println("1. Создание переменных и вывод их значений на консоль:");
         byte coreNum = 4;
         short cpuFreq = 2000;
         int power = 100500;
@@ -18,22 +18,21 @@ class VariablesTheme {
         System.out.println();
 
         //2. Расчет стоимости товара со скидкой
-
-        System.out.println("2. Расчет стоимости товара со скидкой");
+        System.out.println("2. Расчет стоимости товара со скидкой:");
         int costX = 100;
         int costY = 200;
         int total = costX + costY;
-        float discount = (float) 0.11 * total;
+        float discount = 0.11f * total;
         System.out.println("Сумма скидки = " + discount + ", общая сумма товаров со скидкой = " + (total - discount));
         System.out.println();
 
         //3. Вывод на консоль слова JAVA
-        System.out.println("3. Вывод на консоль слова JAVA");
+        System.out.println("3. Вывод на консоль слова JAVA:");
         System.out.println("   J    a  v     v  a    \n   J   a a  v   v  a a   \nJ  JJ  aaaaa  V V  aaaaa \n JJ  a     a  V  a     a ");
         System.out.println();
 
         //4. Отображение min и max значений числовых типов данных
-        System.out.println("4. Отображение min и max значений числовых типов данных");
+        System.out.println("4. Отображение min и max значений числовых типов данных:");
         byte byteMax = 127;
         short shortMax = 32767;
         int intMax = 2147483647;
@@ -44,18 +43,18 @@ class VariablesTheme {
         System.out.println();
 
         //5. Перестановка значений переменных
-        System.out.println("5. Перестановка значений переменных");
+        System.out.println("5. Перестановка значений переменных:");
         float f  = 3.5f;
         double d = 8.34d;
         System.out.println(f  + ", " +  d);
         double temp = f;
         f = (float) d;
-        d = (float) temp;
+        d = (double) temp;
         System.out.println(f  + ", " +  d);
         System.out.println();
 
         //6. Вывод символов и их кодов
-        System.out.println("6. Вывод символов и их кодов");
+        System.out.println("6. Вывод символов и их кодов:");
         int x1 = 35;
         int x2 = 38;
         int x3 = 64;
@@ -66,24 +65,25 @@ class VariablesTheme {
         System.out.println();
 
         //7. Произведение и сумма цифр числа
-        System.out.println("7. Произведение и сумма цифр числа");
-        int n1 = 345 / 100;
-        int n2 = 345 / 10 % 10;
-        int n3 = 345 % 10;
+        System.out.println("7. Произведение и сумма цифр числа:");
+        int num = 345;
+        int n1 = num / 100;
+        int n2 = num / 10 % 10;
+        int n3 = num % 10;
         int muliply = n1 * n2 *n3;
         int sum = n1 + n2 + n3;
-        System.out.println("Произведение цифр 345 = " + muliply + ", cумма цифр 345 = " + sum + ", ");
+        System.out.println("Произведение цифр " + num + " = " + muliply + ", cумма цифр " + num + " = " + sum + ", ");
         System.out.println();
 
         //8. Вывод на консоль ASCII-арт Дюка
-        System.out.println("8. Вывод на консоль ASCII-арт Дюка");
+        System.out.println("8. Вывод на консоль ASCII-арт Дюка:");
         char sp = 32; // ' '
         char s1 = 47; // '/'
         char s2 = 92; // '\'
         char ld = 95; // '_'
         char b1 = 40; // '(''
         char b2 = 41; // ')'
-        System.out.println("" + sp + sp + sp + sp + s1 + s2 + sp + sp + sp + sp + sp + sp); //не знаю почему с кавычками это работает
+        System.out.println("" + sp + sp + sp + sp + s1 + s2 + sp + sp + sp + sp + sp + sp);
         System.out.println("" + sp + sp + sp + s1 + sp + sp + s2 + sp + sp + sp + sp + sp);
         System.out.println("" + sp + sp + s1 + ld + b1 + sp + b2 + s2 + sp + sp + sp + sp);
         System.out.println("" + sp + s1 + sp + sp + sp + sp + sp + sp + s2 + sp + sp + sp);
@@ -91,7 +91,7 @@ class VariablesTheme {
         System.out.println();
 
         //9. Отображение количества сотен, десятков и единиц числа
-        System.out.println("9. Отображение количества сотен, десятков и единиц числа");
+        System.out.println("9. Отображение количества сотен, десятков и единиц числа:");
         int n = 123;
         int h = n / 100;
         int t = n / 10 % 10;
