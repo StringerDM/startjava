@@ -43,23 +43,22 @@ class IfElseStatementTheme {
 
         //3. Работа с числом
         System.out.println("\n3. Работа с числом:");
-        int n = 1234;
-        if(n % 2 == 0) {
-            System.out.println(n + " - четное число");
+        int srcNum = 1234;
+        System.out.print("Число " + srcNum + " является ");
+        if (srcNum == 0) {
+            System.out.println("нулем");
         } else {
-            System.out.println(n + " - нечетное число");
-        }
+            if (srcNum % 2 == 0) {
+                System.out.print("четным и ");
+            } else {
+                System.out.print("нечетным и ");
+            }
 
-        if(n < 0) {
-            System.out.println(n + " - отрицательное число");
-        } else if (n > 0) {
-            System.out.println(n + " - положительное число");
-        } 
-
-        if (n == 0) {
-            System.out.println(n + " - равно нулю");
-        } else {
-            System.out.println(n + " - не равно нулю");
+            if(srcNum < 0) {
+                System.out.println("отрицательным числом.");
+            } else {
+                System.out.println("положительным числом.");
+            }
         }
 
         //4. Поиск одинаковых цифр в числах
@@ -119,26 +118,26 @@ class IfElseStatementTheme {
         int progPercentGrade = 91;
         int hystGrade = 0;
         int progGrade = 0;
-
         if(histPercentGrade <= 60) {
             hystGrade = 2;
-        } else if(histPercentGrade > 60 && histPercentGrade <= 73) {
+        } else if(histPercentGrade <= 73) {
             hystGrade = 3;
-        } else if(histPercentGrade > 73 && histPercentGrade <= 91) {
+        } else if(histPercentGrade <= 91) {
             hystGrade = 4;
-        } else if(histPercentGrade > 91) {
+        } else {
             hystGrade = 5;
         }
 
         if(progPercentGrade <= 60) {
             progGrade = 2;
-        } else if(progPercentGrade > 60 && progPercentGrade <= 73) {
+        } else if(progPercentGrade <= 73) {
             progGrade = 3;
-        } else if(progPercentGrade > 73 && progPercentGrade <= 91) {
+        } else if(progPercentGrade <= 91) {
             progGrade = 4;
-        } else if(progPercentGrade > 91) {
+        } else {
             progGrade = 5;
         }
+
         int gradesAverage = (hystGrade + progGrade) / 2;
         int percentGradesAverage = (histPercentGrade + progPercentGrade) / 2;
         System.out.println(hystGrade + " история");
@@ -151,51 +150,50 @@ class IfElseStatementTheme {
         int rentRate = 5000;
         int sellAmount = 15000;
         int goodsCost = 9000;
-        int yearProfit = sellAmount * 12 - goodsCost * 12 - rentRate * 12;
+        int yearProfit = (sellAmount - goodsCost - rentRate) * 12;
         if (yearProfit >= 0) {
             System.out.println("прибыль за год: " + " +" + yearProfit + "р");
         } else {
-            System.out.println("прибыль за год: " + " -" + yearProfit + "р");
+            System.out.println("прибыль за год: " + " " + yearProfit + "р");
         }
 
         //9. Определение существования треугольника
         System.out.println("\n9. Определение существования треугольника:");
-        int triangleSide1 = 3;
-        int triangleSide2 = 4;
-        int triangleSide3 = 5;
+        int side1 = 3;
+        int side2 = 4;
+        int side3 = 5;
         int hypotenuse = 0;
         int cathet1 = 0; 
         int cathet2 = 0;
         boolean triangleIsExist = false;
-        if(triangleSide1 > 0 && triangleSide2 > 0 && triangleSide3 > 0) {
-            if(triangleSide1 + triangleSide2 > triangleSide3 && triangleSide1 + triangleSide3 > triangleSide2 
-                    && triangleSide2 + triangleSide3 > triangleSide1) {
+        if(side1 > 0 && side2 > 0 && side3 > 0) {
+            if((side1 + side2 > side3) && (side1 + side3 > side2) && (side2 + side3 > side1)) {
                 triangleIsExist = true;
             }
         }
 
         if(triangleIsExist) {
-            if(triangleSide1 > triangleSide2 && triangleSide1 > triangleSide3) {
-                hypotenuse = triangleSide1;
-                cathet1 = triangleSide2;
-                cathet2 = triangleSide3;
-            } else if(triangleSide2 > triangleSide3 && triangleSide2 > triangleSide1) {
-                hypotenuse = triangleSide2;
-                cathet1 = triangleSide1;
-                cathet2 = triangleSide3;
-            } else if(triangleSide3 > triangleSide1 && triangleSide3 > triangleSide2) {
-                hypotenuse = triangleSide3;
-                cathet1 = triangleSide1;
-                cathet2 = triangleSide2;
+            if(side1 > side2 && side1 > side3) {
+                hypotenuse = side1;
+                cathet1 = side2;
+                cathet2 = side3;
+            } else if(side2 > side3 && side2 > side1) {
+                hypotenuse = side2;
+                cathet1 = side1;
+                cathet2 = side3;
+            } else if(side3 > side1 && side3 > side2) {
+                hypotenuse = side3;
+                cathet1 = side1;
+                cathet2 = side2;
             }
             
-            int triangleSquare = cathet1 * cathet2 / 2;
+            int square = cathet1 * cathet2 / 2;
             System.out.println("|\\");
             System.out.println("| \\");
             System.out.println("|  \\");
             System.out.println("|___\\");
             System.out.println("Катеты треугольника равны " + cathet1 + " и " + cathet2 + ", гипотенуза равна " + hypotenuse + ".");
-            System.out.println("Площадь треугольника равна " + triangleSquare + ".");
+            System.out.println("Площадь треугольника равна " + square + ".");
         } else {
             System.out.println("Треугольник не существует");
         }
