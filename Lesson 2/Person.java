@@ -11,7 +11,7 @@ public class Person {
     }
 
     void sit() {
-        System.out.println("Человек может сесть");
+        System.out.println("Человек может сидеть");
     }
 
     void run() {
