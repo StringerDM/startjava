@@ -1,17 +1,11 @@
 public class JaegerTest {
 
     public static void main(String[] args) {
-        Jaeger coyoteTango = new Jaeger();
-        Jaeger chernoAlpha = new Jaeger();
-        coyoteTango.setModelName("Coyote Tango");
-        coyoteTango.setMark("Mark-1");
-        coyoteTango.setOrigin("Japan");
-        coyoteTango.setWeapon("Ballistic mortar cannons");
-        coyoteTango.setWeight(2312f);
-        coyoteTango.setHeight(280f);
-        coyoteTango.setSpeed(5);
-        coyoteTango.setStrength(7);
-        coyoteTango.setArmor(4);
+        Jaeger coyoteTango = new Jaeger("Coyote Tango", "Mark-1", "Japan", 
+                "Ballistic mortar cannons", 2312f, 280f, 5, 7, 4);
+        Jaeger chernoAlpha = new Jaeger("Cherno Alpha", "Mark-1", "Russia", 
+                "Incinerator turbines", 2412f, 280f, 3, 10 ,10);
+
         System.out.printf("%-11s%s", "Model name", "- " + coyoteTango.getModelName());
         System.out.printf("\n%-11s%s", "Mark", "- " + coyoteTango.getMark());
         System.out.printf("\n%-11s%s", "Origin", "- " + coyoteTango.getOrigin());
@@ -28,15 +22,6 @@ public class JaegerTest {
         coyoteTango.setWeapon("Super duper blaster");
         coyoteTango.useWeapon();
 
-        chernoAlpha.setModelName("Cherno Alpha");
-        chernoAlpha.setMark("Mark-1");
-        chernoAlpha.setOrigin("Russia");
-        chernoAlpha.setWeapon("Incinerator turbines");
-        chernoAlpha.setWeight(2412f);
-        chernoAlpha.setHeight(280f);
-        chernoAlpha.setSpeed(3);
-        chernoAlpha.setStrength(10);
-        chernoAlpha.setArmor(10);
         System.out.printf("\n%-11s%s", "Model name", "- " + chernoAlpha.getModelName());
         System.out.printf("\n%-11s%s", "Mark", "- " + chernoAlpha.getMark());
         System.out.printf("\n%-11s%s", "Origin", "- " + chernoAlpha.getOrigin());

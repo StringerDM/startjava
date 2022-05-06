@@ -1,15 +1,34 @@
-import java.util.Scanner;
-
 public class Calculator {
 
-    public void calculate() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите первое число:");
-        int a = scanner.nextInt();
-        System.out.println("Введите знак математической операции:");
-        char sign = scanner.next().charAt(0);
-        System.out.println("Введите второе число:");
-        int b =  scanner.nextInt();;
+    private int a;
+    private int b;
+    private char sign;
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public void setSign(char sign) {
+        this.sign = sign;
+    }
+
+    public char getSign() {
+        return sign;
+    }
+    
+    public double calculate() {
         double result = 1;
         switch(sign) {
             case '+' : 
@@ -33,6 +52,6 @@ public class Calculator {
                 result = a % b;
                 break;
         }
-        System.out.println(a + " " + sign + " " + b + " = " + result);
+        return result;
     }
 }
