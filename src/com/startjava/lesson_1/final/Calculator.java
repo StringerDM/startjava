@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.final;
+
 public class Calculator {
 
     public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class Calculator {
             for(int i = 0; i < b; i++) {
                 result *= a; 
             }
-        } else if(sign == '%') {
+        } else (sign == '%') {
             result = a % b;
         }
         System.out.println(a + " " + sign + " " + b + " = " + result);
