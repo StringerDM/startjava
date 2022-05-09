@@ -6,7 +6,8 @@ public class Calculator {
     private int b;
     private char sign;
 
-    public double calculate(String[] inputData) {
+    public double calculate(String inputString) {
+        String[] inputData = inputString.split(" ");
         a = Integer.parseInt(inputData[0]);
         sign = inputData[1].charAt(0);
         b = Integer.parseInt(inputData[2]);
