@@ -34,21 +34,19 @@ public class Calculator {
         double result = 1;
         switch(sign) {
             case '+' : 
-                result = a + b;
+                result = Math.addExact(a, b);
                 break;
             case '-' : 
-                result = a - b;
+                result = Math.subtractExact(a, b);
                 break;
             case '*' : 
-                result = a * b;
+                result = Math.multiplyExact(a, b);
                 break;
             case '/' : 
                 result = (double) a / b;
                 break;
-            case '^' : 
-                for(int i = 0; i < b; i++) {
-                    result *= a; 
-                }
+            case '^' :
+                result = Math.pow(a, b);
                 break;
             case '%' : 
                 result = a % b;
