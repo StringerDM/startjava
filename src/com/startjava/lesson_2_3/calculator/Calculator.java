@@ -2,15 +2,14 @@ package com.startjava.lesson_2_3.calculator;
 
 public class Calculator {
 
-    private int a;
-    private int b;
-    private char sign;
-
-    public double calculate(String inputString) {
-        String[] inputData = inputString.split(" ");
-        a = Integer.parseInt(inputData[0]);
-        sign = inputData[1].charAt(0);
-        b = Integer.parseInt(inputData[2]);
+    public double calculate(String mathExpression) {
+        int a;
+        int b;
+        char sign;
+        String[] partsExpression = mathExpression.split(" ");
+        a = Integer.parseInt(partsExpression[0]);
+        sign = partsExpression[1].charAt(0);
+        b = Integer.parseInt(partsExpression[2]);
         switch(sign) {
             case '+' : 
                 return Math.addExact(a, b);

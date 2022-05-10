@@ -9,13 +9,13 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         String answer = "yes";
         double result;
-        String inputString;
+        String mathExpression;
         do {
             if(answer.equals("yes")) {
                 System.out.print("Введите математическое выражение: ");
-                inputString = scanner.nextLine();
-                result = calculator.calculate(inputString);
-                System.out.println(inputString + " = " + result);
+                mathExpression = scanner.nextLine();
+                result = calculator.calculate(mathExpression);
+                System.out.println(mathExpression + " = " + result);
             }
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
             answer = scanner.nextLine();
